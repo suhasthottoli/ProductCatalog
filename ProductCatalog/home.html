@@ -14,10 +14,17 @@
                 var prodList=prodListAll[0];
 
                 var products="";
+                var rate=""
                 for(var prod of result){
-                    products+='<div><h2>'+ prod.title +'</h2><img height="100px" src="'+prod.image+'"></div>';
-                }
-
+                //     for(var rt in prod)
+                // {
+                //     //rate=prod["rate"]
+                //     console.log(rt);
+                // }
+                    products+='<div><h2>'+ prod.title +'</h2><img height="100px" src="'+prod.image+'"><br><b>Rs '+prod.price+'<br>Rating:'+prod.rating.rate+'</b></div>';
+                
+            }
+                console.log(products);
                 prodList.innerHTML=products;
             }
             getProducts();
